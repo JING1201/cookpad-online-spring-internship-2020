@@ -16,10 +16,10 @@ module Main
           self.unmarshal_class_method = :decode
           self.service_name = 'main.services.v1.User'
 
-          # TODO: implement GetUser RPC
           rpc :ListUsers, ListUsersRequest, ListUsersResponse
           rpc :CreateUser, CreateUserRequest, CreateUserResponse
           rpc :DeleteUser, DeleteUserRequest, DeleteUserResponse
+          rpc :GetUser, GetUserRequest, GetUserResponse
         end
 
         Stub = Service.rpc_stub_class
